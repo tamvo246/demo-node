@@ -1,0 +1,10 @@
+extends ../layout/layout
+block content
+	.main
+		each selfie in selfies
+			.cart
+				img(src=selfie.image)
+				.cart-title=selfie.name
+				.cart-content=selfie.description
+				//- a.add-cart.btn.btn-primary(href="/cart/add/"+product.id) Add to cart
+	block pagination

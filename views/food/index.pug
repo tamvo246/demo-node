@@ -1,0 +1,9 @@
+extends ../layout/layout
+block content
+	.main
+		each food in foods
+			.cart
+				img(src=food.image)
+				.cart-title=food.name
+				.cart-content=food.description
+				//- a.add-cart.btn.btn-primary(href="/cart/add/"+product.id) Add to cart

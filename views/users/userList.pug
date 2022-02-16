@@ -1,0 +1,24 @@
+extends ../layout/layout
+block content
+	h1 User List
+	form(action='/user/search' method='GET' class='d-flex')
+		input(type='text',name='q',class="form-control",value=query) 
+		button(class='btn btn-primary mx-2' )  Search
+	a(href='/user/create' class="btn btn-warning mt-2") New user
+	table.table
+		thead(class="thead-dark")
+			tr
+				th Avatar
+				th Name
+				th Phone
+				th Action			
+		each user in users
+			tr
+				td
+					img(src=user.avatar)
+				td=user.name 
+				td=user.phone
+				td 
+					.control
+						a.btn.btn-info(href='/user/'+user.id) View
+						a.btn.btn-info(href='/user/update/'+user.id) Update

@@ -1,0 +1,9 @@
+extends ../layout/layout
+block content
+	.main
+		each garden in gardens
+			.cart
+				img(src=garden.image)
+				.cart-title=garden.name
+				.cart-content=garden.description
+				//- a.add-cart.btn.btn-primary(href="/cart/add/"+product.id) Add to cart

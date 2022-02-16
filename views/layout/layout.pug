@@ -1,0 +1,131 @@
+doctype html
+html
+	head
+
+		link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",rel="stylesheet",integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",crossorigin="anonymous")
+		style(type='text/css').
+			#img	{
+				height: 80px;
+				width: 80px;
+				padding:0;		
+			}
+			h5{
+				margin-top:20px;
+			}
+			.alert{
+				margin:10px;
+			}
+			.user-name{
+				position:absolute;
+				right:90px;
+			}
+			.nav{
+				width:100%;
+				position:relative;
+			}
+			body{
+			position:relative;
+			}
+
+			.main{
+				display:flex;
+				width:100%;
+				flex-wrap:wrap;
+				padding:0% 8%;
+			}
+			.cart{
+				width:21%;
+				margin: 20px 2%;
+				border:10px solid transparent;
+				border-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrn1Upz3Ci4-8gLsZWLWzJMspElTsmc_N7uQ&usqp=CAU) 20% round;
+				box-sizing:border-box;
+				padding:10px;
+				box-shadow:7px 7px 20px grey;
+				border-radius:10px;
+				text-align:center;
+				
+			}
+			.cart img{
+				height:200px;
+				width:220px;
+
+
+			}
+			.cart-title{
+				font-size:15px;
+				font-weight:bold;
+				text-align:center;
+				color:#FF00BF;
+			}
+			.pagination{
+				margin-top:20px;
+				display:flex;
+				justify-content:center;
+			}
+			td img{
+				height:50px;
+				width:50px;
+				border-radius:50%;
+			}
+			td{
+				vertical-align: middle;
+				width:25%;
+			}
+			.add-cart{
+				
+			}
+			a{
+				margin:0 10px;
+			}
+			.avatar{
+				position:absolute;
+				right:10px;
+				height:70px;
+				width:70px;
+				border-radius:50%;
+				margin-top:5px;
+			}
+			@font-face {
+			   font-family: myFirstFont;
+			   src: url(sansation_light.woff);
+			 
+			   
+			}
+			.cart-content{
+				font-family: myFirstFont;
+			}
+
+
+	body
+		nav.nav.border-bottom.border-primary
+			img(class="nav-link " src="https://img.freepik.com/free-vector/cute-shiba-inu-dog-paws-up-wall_42750-492.jpg?size=338&ext=jpg", id="img")
+			h5
+				a(class="nav-link active",aria-current="page",href="/") Home
+			h5
+				a(class="nav-link",href="/user")  User
+			//- h5
+				//- a(class="nav-link",href="/product")  Product
+			h5
+				a(class="nav-link",href="/food")  Food
+			h5
+				a(class="nav-link",href="/garden")  Garden
+			h5
+				a(class="nav-link",href="/selfie")  Selfie
+			h5(class="user-name")
+				a(class="nav-link justify-content-end",href="")=user.name
+			img(class="avatar" src="https://scontent.fsgn4-1.fna.fbcdn.net/v/t1.6435-9/84118397_1109866592687631_5988432038493945856_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=XPe1zLngxJAAX9YA2rR&_nc_ht=scontent.fsgn4-1.fna&oh=1f621e33c70c7ae1e596ac9e75316e6d&oe=61260044")
+	block content
+		nav(aria-label='...',class="pagination")
+			ul.pagination
+				li.page-item.disabled
+					a.page-link(href='#', tabindex='-1') Previous
+				li.page-item
+					a.page-link(href='#') 1
+				li.page-item.active
+					a.page-link(href='#') 2 
+				li.page-item
+					a.page-link(href='#') 3
+				li.page-item
+					a.page-link(href='#') Next
+		block pagination
+		

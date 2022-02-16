@@ -1,0 +1,10 @@
+extends ../layout/layout
+block content
+	.main
+		each product in productPage
+			.cart
+				img(src=product.image)
+				.cart-title=product.name
+				.cart-content=product.description
+				//- a.add-cart.btn.btn-primary(href="/cart/add/"+product.id) Add to cart
+	block pagination

@@ -1,0 +1,12 @@
+extends ../layout/layout
+block content
+
+	form(action='/tranfer/create' method='POST',class="mx-2" )
+		input(type="hidden",name="_csrf", value=csrfToken)
+		.form-group
+			label(for="account") Account
+			input(type='text',name="accountId",class="form-control",id="accountId")
+		.form-group
+			label(for="amount") Amount
+			input(type='number',name="amount",class="form-control ",id="amount")
+		button(class="btn btn-success mt-2") Transfer

@@ -1,0 +1,18 @@
+html
+	head
+
+	body
+
+	h1 Create user
+	form(action='/user/create' method='POST',class="mx-2",enctype="multipart/form-data" )
+		.form-group
+			label(for="name") Name
+			input(type='text',name="name",class="form-control",id="name", value=value?value.name:"")
+		.form-group
+			label(for="phone") Phone
+			input(type='text',name="phone",class="form-control ",id="phone",value=value?value.phone:"" )
+		.form-group
+			label(for="avatar") Avatar
+			br
+			input(type='file',name="avatar",class="avatar ",id="avatar" )
+		button(class="btn btn-success mt-2") Create
